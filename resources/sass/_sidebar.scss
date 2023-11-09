@@ -1,0 +1,20 @@
+$button_basic: #fff;
+
+$button_hover: #0F8390;
+
+.sidebar{
+    list-style: none;
+}
+
+.btn-outline-primary
+{
+    background-color: $button_basic;
+    border: none;
+    width: 180px;
+    color: #0F8390;
+    font-size: 16px;
+    &:hover{
+        color: $button_basic;
+        background-color: $button_hover;
+    }
+}
