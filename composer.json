@@ -14,6 +14,7 @@
     "require-dev": {
         "askdkc/breezejp": "^1.7",
         "fakerphp/faker": "^1.9.1",
+        "friendsofphp/php-cs-fixer": "^3.38",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.18",
         "mockery/mockery": "^1.4.4",
