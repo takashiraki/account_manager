@@ -12,14 +12,15 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row mt-5">
-            <div class="col-3">
-                @yield('sidebar')
-            </div>
-            <div class="col-8">
-                @yield('contents')
-            </div>
+    <div class="row mt-5">
+        <div class="col-2">
+            @yield('sidebar')
+        </div>
+        <div class="col-6">
+            @yield('contents')
+        </div>
+        <div class="col-4">
+            @yield('rightbar')
         </div>
     </div>
 
