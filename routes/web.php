@@ -15,26 +15,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/test', function () {
-    return view('dashboard');
-});
+Route::get('/{any}', function () {
+    return view('app');
+})->where('any', '.*');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/test', function () {
+//     return view('dashboard');
+// });
 
-Route::get('/login', function () {
-    return view('Auth.login');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/forget-password', function () {
-    return view('Auth.forget-password');
-});
+// Route::get('/login', function () {
+//     return view('Auth.login');
+// });
 
-Route::get('/completed-password-reset-request', function () {
-    return view('Auth.complete-request-forget-password');
-});
+// Route::get('/forget-password', function () {
+//     return view('Auth.forget-password');
+// });
 
-Route::get('/reset-password', function () {
-    return view('Auth.reset-password');
-});
+// Route::get('/completed-password-reset-request', function () {
+//     return view('Auth.complete-request-forget-password');
+// });
+
+// Route::get('/reset-password', function () {
+//     return view('Auth.reset-password');
+// });
