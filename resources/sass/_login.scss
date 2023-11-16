@@ -4,3 +4,15 @@ $basic: #0F8390;
     outline: 0;
     box-shadow: 0 0 0 2px $basic inset;
 }
+
+.is-invalid::placeholder{
+    color:#dc3545;
+}
+
+.text-danger{
+    text-align: left;
+}
+
+.text-left{
+    text-align: left;
+}
