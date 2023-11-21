@@ -16,6 +16,7 @@
         "vue": "^3.2.37"
     },
     "dependencies": {
-        "bootstrap-vue": "^2.23.1"
+        "bootstrap-vue": "^2.23.1",
+        "vue-router": "^4.2.5"
     }
 }
