@@ -12,13 +12,11 @@ import { createApp } from 'vue';
  * registering components with the application instance so they are ready
  * to use in your application's views. An example is included for you.
  */
+import RootComponent from './App.vue';
+import router from './router/index';
 
-const app = createApp({});
-
-// import ExampleComponent from './components/ExampleComponent.vue';
-import AuthComponent from './components/AuthComponent/AuthComponent.vue';
-// app.component('example-component', ExampleComponent);
-app.component('auth-component', AuthComponent);
+const app = createApp(RootComponent);
+// app.component('auth-component', AuthComponent);
 
 /**
  * The following block of code may be used to automatically register your
@@ -37,5 +35,7 @@ app.component('auth-component', AuthComponent);
  * an "id" attribute of "app". This element is included with the "auth"
  * scaffolding. Otherwise, you will need to add an element yourself.
  */
+
+app.use(router);
 
 app.mount('#app');

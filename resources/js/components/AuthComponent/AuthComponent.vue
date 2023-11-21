@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-const forgotLink = ref("/forget-password");
+const forgotLink = ref("/password-reset-request");
 const email = ref("");
 const password = ref("");
 
@@ -45,7 +45,7 @@ function validation(email: string, password: string){
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                     <div class="card shadow-2-strong" style="border-radius: 1rem;">
                         <div class="card-body p-5 text-center">
-                            <form action="" class="needs-validation">
+                            <form @submit.prevent="onButtonClick" class="needs-validation">
                                 <h3 class="mb-5">Sign in</h3>
 
                                 <div class="form-outline mb-4">
@@ -77,8 +77,8 @@ function validation(email: string, password: string){
                                         <a v-bind:href="forgotLink">Forgot password?</a>
                                     </div>
                                 </div>
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
                             </form>
-                            <button v-on:click="onButtonClick" class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
                         </div>
                     </div>
                 </div>

@@ -6,7 +6,7 @@ $button_hover_border: #0F8390;
 div .btn-primary{
     background-color: $button_basic;
     border: none;
-    width: 180px;
+    min-width: 180px;
     &:hover{
         color: $button_basic;
         background-color: $button_hover;
