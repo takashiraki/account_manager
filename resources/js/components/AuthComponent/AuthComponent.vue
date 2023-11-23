@@ -74,10 +74,11 @@ function validation(email: string, password: string){
                                         <label class="form-check-label" for="form1Example3"> Remember password </label>
                                     </div>
                                     <div>
-                                        <a v-bind:href="forgotLink">Forgot password?</a>
+                                        <!-- <a v-bind:href="forgotLink">Forgot password?</a> -->
+                                        <router-link  to="/password-reset-request">Forgot password?</router-link>
                                     </div>
                                 </div>
-                                <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                                <button class="btn btn-primary btn-lg btn-block login" type="submit">Login</button>
                             </form>
                         </div>
                     </div>

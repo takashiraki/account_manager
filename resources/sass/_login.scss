@@ -1,8 +1,11 @@
-$basic: #0F8390;
+$button_basic: #0F8390;
+
+$button_hover: #fff;
+$button_hover_border: #0F8390;
 
 .form-control:focus {
     outline: 0;
-    box-shadow: 0 0 0 2px $basic inset;
+    box-shadow: 0 0 0 2px $button_basic inset;
 }
 
 .is-invalid::placeholder{
@@ -15,4 +18,15 @@ $basic: #0F8390;
 
 .text-left{
     text-align: left;
+}
+
+.login{
+    background-color: $button_basic;
+    border: none;
+    min-width: 180px;
+    &:hover{
+        color: $button_basic;
+        background-color: $button_hover;
+        border: 1px solid $button_hover_border;
+    }
 }

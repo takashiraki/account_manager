@@ -9,6 +9,10 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>{{ config('app.name', 'Vue Laravel Routing') }}</title>
     @vite(['resources/sass/style.scss', 'resources/js/app.js'])
+    <!-- reset.css modern-css-reset -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
 </head>
 
 <body>

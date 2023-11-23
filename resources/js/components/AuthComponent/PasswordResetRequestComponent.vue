@@ -48,7 +48,7 @@ function validation(email: string){
                                         placeholder="Email" />
                                         <p class="text-danger">{{ emailError }}</p>
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Request password reset</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block login">Request password reset</button>
                             </form>
                         </div>
                     </div>
