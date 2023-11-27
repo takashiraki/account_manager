@@ -1,75 +1,41 @@
 <script setup lang="ts">
-import {
-    useRouter
-} from 'vue-router';
-const route = useRouter();
-const isDashboard = route.path === '/dashboard';
-const isAccount = route.path === '/accounts';
-const isUser = route.path === '/users';
+import SideBarComponent from './SidebarComponent.vue';
+import NavComponent from './../layouts/NavContents.vue';
 </script>
 
 <template>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+    <NavComponent />
+    <div class="row mt-5">
+        <div class="col-2 px-2">
+            <SideBarComponent />
         </div>
-    </div>
-</nav>
-<div class="row mt-5">
-    <div class="col-2">
-        <ul class="sidebar">
-            <li>
-                <!-- <a class="btn btn btn-outline-primary btn-lg sidebar-btn" role="button" aria-disabled="true" href="">Dashboard</a> -->
-                <router-link 
-                v-bind:class="{ 'btn': true, 'btn-outline-primary': true, 'btn-lg': true, 'sidebar-btn': true, 'active': isDashboard }" role="button" aria-disabled="true" to="/dashboard">Dashboard</router-link>
-            </li>
-            <li>
-                <!-- <a class="btn btn btn-outline-primary btn-lg sidebar-btn" role="button" aria-disabled="true" href="">Account</a> -->
-                <router-link 
-                v-bind:class="{ 'btn': true, 'btn-outline-primary': true, 'btn-lg': true, 'sidebar-btn': true, 'active': isAccount }" role="button" aria-disabled="true" to="/accounts">Account</router-link>
-            </li>
-            <li>
-                <!-- <a class="btn btn btn-outline-primary btn-lg sidebar-btn" role="button" aria-disabled="true" href="">User</a> -->
-                <router-link 
-                v-bind:class="{ 'btn': true, 'btn-outline-primary': true, 'btn-lg': true, 'sidebar-btn': true, 'active': isUser }" role="button" aria-disabled="true" to="/users">User</router-link>
-            </li>
-            <li><a class="btn btn btn-outline-primary btn-lg sidebar-btn" role="button" aria-disabled="true" href="">Loan</a></li>
-        </ul>
-    </div>
-    <div class="col-7">
-        <div class="alert alert-success" role="alert">
-            <h4 class="alert-heading">Welcome back!</h4>
-            <p>
-                The grid supports six responsive breakpoints. Breakpoints are based on a min-width media query, which affects that breakpoint and all breakpoints above it (e.g., .col-sm-4 applies to sm, md, lg, xl, xxl).
-            </p>
-            <p>
-                This means that you can control the size and behavior of containers and columns for each breakpoint.
-            </p>
-            <hr>
-            <p class="mb-0">Use the margin utilities whenever you need them and keep them nice and neat.</p>
+        <div class="col-7 px-2">
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">Welcome back!</h4>
+                <p>
+                    The grid supports six responsive breakpoints. Breakpoints are based on a min-width media query, which
+                    affects that breakpoint and all breakpoints above it (e.g., .col-sm-4 applies to sm, md, lg, xl, xxl).
+                </p>
+                <p>
+                    This means that you can control the size and behavior of containers and columns for each breakpoint.
+                </p>
+                <hr>
+                <p class="mb-0">Use the margin utilities whenever you need them and keep them nice and neat.</p>
+            </div>
         </div>
-    </div>
-    <div class="col-3">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Title</h5>
-                <h6 class="card-subtitle mb-2 text-body-secondary">Sub title</h6>
-                <p class="card-text">A brief sample text based on the card's title that makes up the bulk of the card's content.</p>
-                <a href="#" class="card-link">Link1</a>
-                <a href="#" class="card-link">Link2</a>
+        <div class="col-3 px-2">
+            <div class="card sticky-top">
+                <div class="card-body">
+                    <h5 class="card-title">Title</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">Sub title</h6>
+                    <p class="card-text">A brief sample text based on the card's title that makes up the bulk of the card's
+                        content.</p>
+                    <a href="#" class="card-link">Link1</a>
+                    <a href="#" class="card-link">Link2</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </template>
 
 <style>
