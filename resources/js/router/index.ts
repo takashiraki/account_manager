@@ -4,6 +4,10 @@ import PasswordResetRequestComponent from './../components/AuthComponent/Passwor
 import DashBoardComponent from './../components/layouts/DashboardComponent.vue';
 import AccountComponent from './../components/AccountComponent/AccountComponent.vue';
 import UserComponent from './../components/UserComponent/UserComponent.vue';
+import UserListComponent from './../components/UserComponent/UserListComponent.vue';
+import UserCreateComponent from './../components/UserComponent/UserCreateComponent.vue';
+import UserDetailComponent from './../components/UserComponent/UserDetailComponent.vue';
+import LoanComponent from './../components/LoanComponent/LoanComponent.vue';
 
 const router = createRouter({
     history: createWebHistory(),
@@ -31,7 +35,27 @@ const router = createRouter({
         {
             path: '/users',
             name: 'Users',
-            component: UserComponent
+            component: UserComponent,
+            children: [
+                {
+                    path: '',
+                    name: 'UserList',
+                    components: {
+                        default: UserListComponent,
+                        sub_component: UserDetailComponent
+                    },
+                },
+                {
+                    path: '/user/create',
+                    name: 'Create new user',
+                    component: UserCreateComponent,
+                }
+            ],
+        },
+        {
+            path: '/loans',
+            name: 'Loans',
+            component: LoanComponent
         }
     ]
 });
