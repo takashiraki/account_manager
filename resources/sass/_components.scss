@@ -1,10 +1,54 @@
-$button_basic: #0F8390;
+$strong_button_basic: #0F8390;
+$strong_font_basic: #fff;
+$strong_button_hover: #fff;
+$strong_font_hover: #333;
+$strong_button_hover: #fff;
+$strong_button_hover_border: #0F8390;
 
-$button_hover: #fff;
-$button_hover_border: #0F8390;
+.form-select:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px #0F8390 inset;
+}
 
+.row{
+        --bs-gutter-x: 0;
+}
 
-.main-container{
-    border: 1px solid $button_hover_border;
-    border-radius: 5px;
+.strong-button{
+    color: $strong_font_basic;
+    background-color: $strong_button_basic;
+    border: 1px solid $strong_button_basic;
+    &:hover{
+        color: $strong_font_hover;
+        background-color: $strong_button_hover;
+        border: 1px solid $strong_button_hover_border;
+    }
+}
+
+.search-button{
+    background-color: $strong_button_hover;
+    border: 1px solid $strong_button_basic;
+    background-image: url(./../images/search.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    &:hover{
+        background-color: $strong_button_basic;
+        background-image: url(./../images/search-hover.png);
+        border: 1px solid $strong_button_hover_border;
+    }
+}
+
+.create-btn{
+    background-color: $strong_button_hover;
+    border: 1px solid $strong_button_basic;
+    background-image: url(./../images/add.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    &:hover{
+        background-color: $strong_button_basic;
+        background-image: url(./../images/add-hover.png);
+        border: 1px solid $strong_button_hover_border;
+    }
 }
