@@ -6,6 +6,8 @@ import AccountComponent from './../components/AccountComponent/AccountComponent.
 import UserComponent from './../components/UserComponent/UserComponent.vue';
 import UserListComponent from './../components/UserComponent/UserListComponent.vue';
 import UserCreateComponent from './../components/UserComponent/UserCreateComponent.vue';
+import UserEditComponent from './../components/UserComponent/UserEditComponent.vue';
+import UserOldInfoComponent from './../components/UserComponent/UserOldInfoComponent.vue';
 import UserDetailComponent from './../components/UserComponent/UserDetailComponent.vue';
 import LoanComponent from './../components/LoanComponent/LoanComponent.vue';
 
@@ -49,6 +51,14 @@ const router = createRouter({
                     path: '/user/create',
                     name: 'Create new user',
                     component: UserCreateComponent,
+                },
+                {
+                    path: '/user/:id/edit',
+                    name: 'Edit user',
+                    components: {
+                        default: UserEditComponent,
+                        sub_component: UserOldInfoComponent
+                    }
                 }
             ],
         },

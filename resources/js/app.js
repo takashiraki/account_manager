@@ -7,6 +7,13 @@
 import './bootstrap';
 import { createApp } from 'vue';
 
+import { createPopper } from '@popperjs/core';
+const popcorn = document.querySelector('#popcorn');
+const tooltip = document.querySelector('#tooltip');
+createPopper(popcorn, tooltip, {
+    placement: 'top',
+});
+
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
  * registering components with the application instance so they are ready

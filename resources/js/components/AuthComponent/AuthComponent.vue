@@ -11,25 +11,25 @@ const passwordError = ref("");
 const isValidEmail = ref(false);
 const isValidPassword = ref(false);
 
-function onButtonClick (){
-    validation(email.value,password.value);
+function onButtonClick() {
+    validation(email.value, password.value);
 }
 
-function validation(email: string, password: string){
+function validation(email: string, password: string) {
     emailError.value = "";
     passwordError.value = "";
 
-    if(email.length === 0 && password.length === 0){
+    if (email.length === 0 && password.length === 0) {
         emailError.value = "Input your email.";
         passwordError.value = "Input password";
         return;
     }
 
-    if(email.length === 0){
+    if (email.length === 0) {
         emailError.value = "Input your email.";
     }
 
-    if(password.length === 0){
+    if (password.length === 0) {
         passwordError.value = "Input password";
     }
 
@@ -43,28 +43,24 @@ function validation(email: string, password: string){
         <div class="h-100 container py-5">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                    <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="d-flex align-items-center justify-content-center shadow-2-strong border"
+                        style="border-radius: 1rem;">
                         <div class="card-body p-5 text-center">
                             <form @submit.prevent="onButtonClick" class="needs-validation">
                                 <h3 class="mb-5">Sign in</h3>
 
                                 <div class="form-outline mb-4">
-                                    <input 
-                                        v-model="email" 
-                                        v-bind:class="{'form-control':true,'form-control-lg':true,'is-invalid':emailError,'is-valid':isValidEmail}"
-                                        type="email" id="typeEmailX-2"
-                                        placeholder="Email" />
-                                        <p class="text-danger">{{ emailError }}</p>
+                                    <input v-model="email"
+                                        v-bind:class="{ 'form-control': true, 'form-control-lg': true, 'is-invalid': emailError, 'is-valid': isValidEmail }"
+                                        type="email" id="typeEmailX-2" placeholder="Email" />
+                                    <p class="text-danger">{{ emailError }}</p>
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <input
-                                        v-model="password" 
-                                        v-bind:class="{'form-control':true,'form-control-lg':true,'is-invalid':passwordError,'is-valid':isValidPassword}"
-                                        type="password" 
-                                        id="typePasswordX-2"
-                                        placeholder="password" />
-                                        <p class="text-danger">{{ passwordError }}</p>
+                                    <input v-model="password"
+                                        v-bind:class="{ 'form-control': true, 'form-control-lg': true, 'is-invalid': passwordError, 'is-valid': isValidPassword }"
+                                        type="password" id="typePasswordX-2" placeholder="password" />
+                                    <p class="text-danger">{{ passwordError }}</p>
                                 </div>
 
                                 <!-- Checkbox -->
@@ -75,7 +71,7 @@ function validation(email: string, password: string){
                                     </div>
                                     <div>
                                         <!-- <a v-bind:href="forgotLink">Forgot password?</a> -->
-                                        <router-link  to="/password-reset-request">Forgot password?</router-link>
+                                        <router-link to="/password-reset-request">Forgot password?</router-link>
                                     </div>
                                 </div>
                                 <button class="btn btn-primary btn-lg btn-block login" type="submit">Login</button>

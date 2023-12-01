@@ -12,28 +12,28 @@ const nick_name_error = ref("");
 const is_valid_user_name = ref(false);
 const is_valid_nick_name = ref(false);
 
-const number_of_accounts = ref(0);
-const account_links = ref([]);
+const numberOfAccounts = ref(0);
+const accountLinks = ref([]);
 
-const onButtonClick = () => {
+function onButtonClick() {
     validation(user_name.value, nick_name.value);
 }
 
-const validation = (user_name: string, nick_name: string) => {
+function validation(user_name: string, nick_name: string) {
     user_name_error.value = "";
-    let user_email_error: string = "";
+    nick_name_error.value = "";
 
     if (user_name.length === 0) {
         user_name_error.value = "Enter new user name.";
-    } else if (user_name.length > 256) {
-        user_name_error.value = "User name must be less than 256 characters long.";
+    } else if (256 < user_name.length) {
+        user_name_error.value = 'User name must be less than 256 characters long.';
     }
 
-    if (nick_name.length > 256 && nick_name.length !== 0) {
-        nick_name_error.value = "Nick name must be less than 256 characters long."
+    if (256 < nick_name.length) {
+        nick_name_error.value = "Nick name must be less than 256 characters long.";
     }
 
-    is_valid_user_name.value = user_name_error.value === '';
+    is_valid_user_name.value = nick_name_error.value === '';
     is_valid_nick_name.value = nick_name_error.value === '';
 }
 
@@ -43,22 +43,22 @@ const handleRoleChange = (role) => {
 };
 
 const addAccountLink = () => {
-    number_of_accounts.value++;
-    account_links.value.push({
-        id: number_of_accounts.value,
+    numberOfAccounts.value++;
+    accountLinks.value.push({
+        id: numberOfAccounts.value,
         selectedAccount: null
     });
 };
 
 const removeAccountLink = (id) => {
-    number_of_accounts.value--;
-    account_links.value = account_links.value.filter(link => link.id !== id);
+    numberOfAccounts.value--;
+    accountLinks.value = accountLinks.value.filter(link => link.id !== id);
 };
 </script>
 
 <template>
     <div class="border-bottom pb-2">
-        <h1 class="fs-3">Create a new user</h1>
+        <h1 class="fs-3">Edit user</h1>
     </div>
     <form form @submit.prevent="onButtonClick">
         <div class="border-bottom py-3">
@@ -110,7 +110,7 @@ const removeAccountLink = (id) => {
                 <p>Personal user can access specific accounts.</p>
             </div>
 
-            <div v-for="link in account_links" :key="link.id">
+            <div v-for="link in accountLinks" :key="link.id">
                 <div class="mt-3">
                     <label for="link_account">Account</label>
                 </div>
@@ -129,19 +129,7 @@ const removeAccountLink = (id) => {
 
         </div>
         <div class="py-3 float-end">
-            <button class="btn btn-primary btn-lg btn-block login btn-sm" type="submit">Create</button>
+            <button class="btn btn-primary btn-lg btn-block login btn-sm" type="submit">Update</button>
         </div>
     </form>
 </template>
-
-<style scoped>
-.remove-icon {
-    font-size: 24px;
-    cursor: pointer;
-    color: red;
-}
-
-.form-select {
-    width: 95%;
-}
-</style>
