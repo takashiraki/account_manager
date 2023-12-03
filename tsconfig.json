@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./public/js",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./@/*"]
+    }
+  },
+  "include": [
+    "resources/js/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
