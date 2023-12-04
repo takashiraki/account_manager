@@ -125,11 +125,23 @@ const removeAccountLink = (id) => {
                 </div>
             </div>
 
-            <div @click="addAccountLink" class="btn btn-primary btn-lg btn-block login btn-sm mt-2">Link account</div>
+            <div @click="addAccountLink" class="btn btn-primary btn-lg btn-block btn-sm mt-2">Link account</div>
 
         </div>
         <div class="py-3 float-end">
-            <button class="btn btn-primary btn-lg btn-block login btn-sm" type="submit">Update</button>
+            <button class="btn btn-primary btn-lg btn-block btn-sm" type="submit">Update</button>
         </div>
     </form>
 </template>
+
+<style>
+.remove-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: red;
+}
+
+.form-select {
+    width: 95%;
+}
+</style>

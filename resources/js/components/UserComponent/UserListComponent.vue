@@ -12,12 +12,19 @@
                         <option value="1">Admin</option>
                         <option value="2">User</option>
                     </select>
-                    <button type="button" class="btn btn-primary mx-2 search-button">
+                    <button type="button"
+                        class="btn btn-outline-primary mx-2 d-flex justify-content-center align-items-center icon-btn">
+                        <span class="material-symbols-outlined">
+                            search
+                        </span>
                     </button>
                 </div>
             </form>
             <router-link to="/user/create"
-                v-bind:class="{ 'btn': true, 'btn-primary': true, 'strong-button': true, 'create-btn': true }">
+                v-bind:class="{ 'btn': true, 'btn-primary': true, 'd-flex': true, 'justify-content-center': true, 'align-items-center': true, 'icon-btn': true }">
+                <span class="material-symbols-outlined">
+                    person_add
+                </span>
             </router-link>
         </div>
     </div>

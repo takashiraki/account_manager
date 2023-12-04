@@ -1,9 +1,6 @@
-$strong_button_basic: #0F8390;
-$strong_font_basic: #fff;
-$strong_button_hover: #fff;
-$strong_font_hover: #333;
-$strong_button_hover: #fff;
-$strong_button_hover_border: #0F8390;
+$strong_color: #0F8390;
+$base_color: #fff;
+$font_color: #333;
 
 .form-select:focus {
     outline: 0;
@@ -14,41 +11,32 @@ $strong_button_hover_border: #0F8390;
         --bs-gutter-x: 0;
 }
 
-.strong-button{
-    color: $strong_font_basic;
-    background-color: $strong_button_basic;
-    border: 1px solid $strong_button_basic;
+.btn-primary{
+    color: $base_color;
+    background-color: $strong_color;
+    border: 1px solid $strong_color;
     &:hover{
-        color: $strong_font_hover;
-        background-color: $strong_button_hover;
-        border: 1px solid $strong_button_hover_border;
+        color: $strong_color;
+        background-color: $base_color;
+        border: 1px solid $strong_color;
     }
 }
 
-.search-button{
-    background-color: $strong_button_hover;
-    border: 1px solid $strong_button_basic;
-    background-image: url(./../images/search.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 40px;
+.btn-outline-primary{
+    color: $strong_color;
+    background-color: $base_color;
+    border: 1px solid $strong_color;
     &:hover{
-        background-color: $strong_button_basic;
-        background-image: url(./../images/search-hover.png);
-        border: 1px solid $strong_button_hover_border;
+        color: $base_color;
+        background-color: $strong_color;
+        border: 1px solid $strong_color;
     }
 }
 
-.create-btn{
-    background-color: $strong_button_hover;
-    border: 1px solid $strong_button_basic;
-    background-image: url(./../images/add.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 40px;
-    &:hover{
-        background-color: $strong_button_basic;
-        background-image: url(./../images/add-hover.png);
-        border: 1px solid $strong_button_hover_border;
-    }
+.icon-btn{
+    max-width: 40px;
+}
+
+.alert{
+    border: none;
 }

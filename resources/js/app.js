@@ -22,6 +22,8 @@ createPopper(popcorn, tooltip, {
 import RootComponent from './App.vue';
 import router from './router/index';
 
+import "bootstrap/dist/js/bootstrap.bundle.min.js"
+
 const app = createApp(RootComponent);
 // app.component('auth-component', AuthComponent);
 

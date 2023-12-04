@@ -41,6 +41,5 @@ const isLoan = route.path === '/loans';
 :not(.btn-check)+.btn:active {
     color: #fff;
     background-color: #0F8390;
-    border-color: none;
-}
-</style>
+    border-color: #0F8390;
+}</style>

@@ -20,6 +20,7 @@ $button_hover: #F5F6F6;
     &:hover{
         color: $font_color;
         background-color: $button_hover;
+        border: none;
     }
     &:active{
         color: $font_color;
