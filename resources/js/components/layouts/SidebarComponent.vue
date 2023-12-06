@@ -42,4 +42,5 @@ const isLoan = route.path === '/loans';
     color: #fff;
     background-color: #0F8390;
     border-color: #0F8390;
-}</style>
+}
+</style>

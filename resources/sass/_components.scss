@@ -37,6 +37,15 @@ $font_color: #333;
     max-width: 40px;
 }
 
+.more_horiz{
+    border: none;
+    &:hover{
+        color: $strong_color;
+        background-color: $base_color;
+        border: none;
+    }
+}
+
 .alert{
     border: none;
 }

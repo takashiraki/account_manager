@@ -42,14 +42,19 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="dropdown dropstart">
-                        <button class="btn btn-outline-primary dropdown-toggle icon-btn" type="button"
+                        <button class="btn btn-outline-primary dropdown-toggle icon-btn more_horiz" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="material-symbols-outlined d-flex justify-content-center align-items-center">
-                                settings
+                                more_horiz
                             </span>
                         </button>
                         <ul class="dropdown-menu" style="">
-                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <li>
+                                <router-link
+                                    v-bind:class="{ 'link-offset-2': true, 'link-offset-3-hover': true, 'link-underline': true, 'link-underline-opacity-0': true, 'link-underline-opacity-75-hover': true, 'dropdown-item': true }"
+                                    to="/user/hogehoge/edit">Edit
+                                </router-link>
+                            </li>
                             <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                     </div>
@@ -67,14 +72,17 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="dropdown dropstart">
-                        <button class="btn btn-outline-primary dropdown-toggle icon-btn" type="button"
+                        <button class="btn btn-outline-primary dropdown-toggle icon-btn more_horiz" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="material-symbols-outlined d-flex justify-content-center align-items-center">
-                                settings
+                                more_horiz
                             </span>
                         </button>
                         <ul class="dropdown-menu" style="">
-                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <router-link
+                                v-bind:class="{ 'link-offset-2': true, 'link-offset-3-hover': true, 'link-underline': true, 'link-underline-opacity-0': true, 'link-underline-opacity-75-hover': true, 'dropdown-item': true }"
+                                to="/user/hogehoge/edit">Edit
+                            </router-link>
                             <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                     </div>
@@ -92,14 +100,17 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="dropdown dropstart">
-                        <button class="btn btn-outline-primary dropdown-toggle icon-btn" type="button"
+                        <button class="btn btn-outline-primary dropdown-toggle icon-btn more_horiz" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="material-symbols-outlined d-flex justify-content-center align-items-center">
-                                settings
+                                more_horiz
                             </span>
                         </button>
                         <ul class="dropdown-menu" style="">
-                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <router-link
+                                v-bind:class="{ 'link-offset-2': true, 'link-offset-3-hover': true, 'link-underline': true, 'link-underline-opacity-0': true, 'link-underline-opacity-75-hover': true, 'dropdown-item': true }"
+                                to="/user/hogehoge/edit">Edit
+                            </router-link>
                             <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                     </div>
@@ -117,14 +128,17 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="dropdown dropstart">
-                        <button class="btn btn-outline-primary dropdown-toggle icon-btn" type="button"
+                        <button class="btn btn-outline-primary dropdown-toggle icon-btn more_horiz" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="material-symbols-outlined d-flex justify-content-center align-items-center">
-                                settings
+                                more_horiz
                             </span>
                         </button>
                         <ul class="dropdown-menu" style="">
-                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <router-link
+                                v-bind:class="{ 'link-offset-2': true, 'link-offset-3-hover': true, 'link-underline': true, 'link-underline-opacity-0': true, 'link-underline-opacity-75-hover': true, 'dropdown-item': true }"
+                                to="/user/hogehoge/edit">Edit
+                            </router-link>
                             <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                     </div>
@@ -142,14 +156,17 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="dropdown dropstart">
-                        <button class="btn btn-outline-primary dropdown-toggle icon-btn" type="button"
+                        <button class="btn btn-outline-primary dropdown-toggle icon-btn more_horiz" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="material-symbols-outlined d-flex justify-content-center align-items-center">
-                                settings
+                                more_horiz
                             </span>
                         </button>
                         <ul class="dropdown-menu" style="">
-                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <router-link
+                                v-bind:class="{ 'link-offset-2': true, 'link-offset-3-hover': true, 'link-underline': true, 'link-underline-opacity-0': true, 'link-underline-opacity-75-hover': true, 'dropdown-item': true }"
+                                to="/user/hogehoge/edit">Edit
+                            </router-link>
                             <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                     </div>
@@ -167,14 +184,17 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="dropdown dropstart">
-                        <button class="btn btn-outline-primary dropdown-toggle icon-btn" type="button"
+                        <button class="btn btn-outline-primary dropdown-toggle icon-btn more_horiz" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="material-symbols-outlined d-flex justify-content-center align-items-center">
-                                settings
+                                more_horiz
                             </span>
                         </button>
                         <ul class="dropdown-menu" style="">
-                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <router-link
+                                v-bind:class="{ 'link-offset-2': true, 'link-offset-3-hover': true, 'link-underline': true, 'link-underline-opacity-0': true, 'link-underline-opacity-75-hover': true, 'dropdown-item': true }"
+                                to="/user/hogehoge/edit">Edit
+                            </router-link>
                             <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                     </div>
@@ -192,14 +212,17 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="dropdown dropstart">
-                        <button class="btn btn-outline-primary dropdown-toggle icon-btn" type="button"
+                        <button class="btn btn-outline-primary dropdown-toggle icon-btn more_horiz" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="material-symbols-outlined d-flex justify-content-center align-items-center">
-                                settings
+                                more_horiz
                             </span>
                         </button>
                         <ul class="dropdown-menu" style="">
-                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <router-link
+                                v-bind:class="{ 'link-offset-2': true, 'link-offset-3-hover': true, 'link-underline': true, 'link-underline-opacity-0': true, 'link-underline-opacity-75-hover': true, 'dropdown-item': true }"
+                                to="/user/hogehoge/edit">Edit
+                            </router-link>
                             <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                     </div>
@@ -217,14 +240,17 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="dropdown dropstart">
-                        <button class="btn btn-outline-primary dropdown-toggle icon-btn" type="button"
+                        <button class="btn btn-outline-primary dropdown-toggle icon-btn more_horiz" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="material-symbols-outlined d-flex justify-content-center align-items-center">
-                                settings
+                                more_horiz
                             </span>
                         </button>
                         <ul class="dropdown-menu" style="">
-                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <router-link
+                                v-bind:class="{ 'link-offset-2': true, 'link-offset-3-hover': true, 'link-underline': true, 'link-underline-opacity-0': true, 'link-underline-opacity-75-hover': true, 'dropdown-item': true }"
+                                to="/user/hogehoge/edit">Edit
+                            </router-link>
                             <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                     </div>
@@ -242,14 +268,17 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="dropdown dropstart">
-                        <button class="btn btn-outline-primary dropdown-toggle icon-btn" type="button"
+                        <button class="btn btn-outline-primary dropdown-toggle icon-btn more_horiz" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="material-symbols-outlined d-flex justify-content-center align-items-center">
-                                settings
+                                more_horiz
                             </span>
                         </button>
                         <ul class="dropdown-menu" style="">
-                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <router-link
+                                v-bind:class="{ 'link-offset-2': true, 'link-offset-3-hover': true, 'link-underline': true, 'link-underline-opacity-0': true, 'link-underline-opacity-75-hover': true, 'dropdown-item': true }"
+                                to="/user/hogehoge/edit">Edit
+                            </router-link>
                             <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                     </div>
@@ -267,14 +296,17 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="dropdown dropstart">
-                        <button class="btn btn-outline-primary dropdown-toggle icon-btn" type="button"
+                        <button class="btn btn-outline-primary dropdown-toggle icon-btn more_horiz" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="material-symbols-outlined d-flex justify-content-center align-items-center">
-                                settings
+                                more_horiz
                             </span>
                         </button>
                         <ul class="dropdown-menu" style="">
-                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <router-link
+                                v-bind:class="{ 'link-offset-2': true, 'link-offset-3-hover': true, 'link-underline': true, 'link-underline-opacity-0': true, 'link-underline-opacity-75-hover': true, 'dropdown-item': true }"
+                                to="/user/hogehoge/edit">Edit
+                            </router-link>
                             <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                     </div>
@@ -292,14 +324,17 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="dropdown dropstart">
-                        <button class="btn btn-outline-primary dropdown-toggle icon-btn" type="button"
+                        <button class="btn btn-outline-primary dropdown-toggle icon-btn more_horiz" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="material-symbols-outlined d-flex justify-content-center align-items-center">
-                                settings
+                                more_horiz
                             </span>
                         </button>
                         <ul class="dropdown-menu" style="">
-                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <router-link
+                                v-bind:class="{ 'link-offset-2': true, 'link-offset-3-hover': true, 'link-underline': true, 'link-underline-opacity-0': true, 'link-underline-opacity-75-hover': true, 'dropdown-item': true }"
+                                to="/user/hogehoge/edit">Edit
+                            </router-link>
                             <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                     </div>
@@ -317,14 +352,17 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="dropdown dropstart">
-                        <button class="btn btn-outline-primary dropdown-toggle icon-btn" type="button"
+                        <button class="btn btn-outline-primary dropdown-toggle icon-btn more_horiz" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="material-symbols-outlined d-flex justify-content-center align-items-center">
-                                settings
+                                more_horiz
                             </span>
                         </button>
                         <ul class="dropdown-menu" style="">
-                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <router-link
+                                v-bind:class="{ 'link-offset-2': true, 'link-offset-3-hover': true, 'link-underline': true, 'link-underline-opacity-0': true, 'link-underline-opacity-75-hover': true, 'dropdown-item': true }"
+                                to="/user/hogehoge/edit">Edit
+                            </router-link>
                             <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                     </div>
@@ -342,14 +380,17 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="dropdown dropstart">
-                        <button class="btn btn-outline-primary dropdown-toggle icon-btn" type="button"
+                        <button class="btn btn-outline-primary dropdown-toggle icon-btn more_horiz" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="material-symbols-outlined d-flex justify-content-center align-items-center">
-                                settings
+                                more_horiz
                             </span>
                         </button>
                         <ul class="dropdown-menu" style="">
-                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <router-link
+                                v-bind:class="{ 'link-offset-2': true, 'link-offset-3-hover': true, 'link-underline': true, 'link-underline-opacity-0': true, 'link-underline-opacity-75-hover': true, 'dropdown-item': true }"
+                                to="/user/hogehoge/edit">Edit
+                            </router-link>
                             <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                     </div>
@@ -367,14 +408,17 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="dropdown dropstart">
-                        <button class="btn btn-outline-primary dropdown-toggle icon-btn" type="button"
+                        <button class="btn btn-outline-primary dropdown-toggle icon-btn more_horiz" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="material-symbols-outlined d-flex justify-content-center align-items-center">
-                                settings
+                                more_horiz
                             </span>
                         </button>
                         <ul class="dropdown-menu" style="">
-                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <router-link
+                                v-bind:class="{ 'link-offset-2': true, 'link-offset-3-hover': true, 'link-underline': true, 'link-underline-opacity-0': true, 'link-underline-opacity-75-hover': true, 'dropdown-item': true }"
+                                to="/user/hogehoge/edit">Edit
+                            </router-link>
                             <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                     </div>
@@ -392,14 +436,17 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center">
                     <div class="dropdown dropstart">
-                        <button class="btn btn-outline-primary dropdown-toggle icon-btn" type="button"
+                        <button class="btn btn-outline-primary dropdown-toggle icon-btn more_horiz" type="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="material-symbols-outlined d-flex justify-content-center align-items-center">
-                                settings
+                                more_horiz
                             </span>
                         </button>
                         <ul class="dropdown-menu" style="">
-                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                            <router-link
+                                v-bind:class="{ 'link-offset-2': true, 'link-offset-3-hover': true, 'link-underline': true, 'link-underline-opacity-0': true, 'link-underline-opacity-75-hover': true, 'dropdown-item': true }"
+                                to="/user/hogehoge/edit">Edit
+                            </router-link>
                             <li><a class="dropdown-item" href="#">Delete</a></li>
                         </ul>
                     </div>
