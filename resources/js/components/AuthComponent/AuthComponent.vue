@@ -17,16 +17,16 @@ const isValidEmail = ref(false);
 const isValidPassword = ref(false);
 
 function onButtonClick() {
-    validation(email.value, password.value);
+    // validation(email.value, password.value);
     handle(email.value, password.value);
 
-    if (loginError) {
-        isValidEmail.value = true;
-        isValidPassword.value = true;
-    }
+    // if (loginError) {
+    //     isValidEmail.value = true;
+    //     isValidPassword.value = true;
+    // }
 
-    isValidEmail.value = emailError.value === '';
-    isValidPassword.value = passwordError.value === '';
+    // isValidEmail.value = emailError.value === '';
+    // isValidPassword.value = passwordError.value === '';
 }
 
 function validation(email: string, password: string) {
