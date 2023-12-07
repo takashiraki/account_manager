@@ -22,6 +22,9 @@ createPopper(popcorn, tooltip, {
 import RootComponent from './App.vue';
 import router from './router/index';
 
+import axios from 'axios';
+axios.defaults.withCredentials = true;
+
 import "bootstrap/dist/js/bootstrap.bundle.min.js"
 
 const app = createApp(RootComponent);

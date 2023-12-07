@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Http\Controllers\Auth\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,26 +20,4 @@ Route::get('/{any}', function () {
     return view('app');
 })->where('any', '.*');
 
-// Route::get('/test', function () {
-//     return view('dashboard');
-// });
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/login', function () {
-//     return view('Auth.login');
-// });
-
-// Route::get('/forget-password', function () {
-//     return view('Auth.forget-password');
-// });
-
-// Route::get('/completed-password-reset-request', function () {
-//     return view('Auth.complete-request-forget-password');
-// });
-
-// Route::get('/reset-password', function () {
-//     return view('Auth.reset-password');
-// });
+Route::post('/login', [AuthController::class, 'login'])->name('login');

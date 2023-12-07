@@ -11,7 +11,7 @@ const password = ref("");
 
 const emailError = ref("");
 const passwordError = ref("");
-const loginError = ref(false); // 新たに追加
+const loginError = ref(false);
 
 const isValidEmail = ref(false);
 const isValidPassword = ref(false);
@@ -19,6 +19,14 @@ const isValidPassword = ref(false);
 function onButtonClick() {
     validation(email.value, password.value);
     handle(email.value, password.value);
+
+    if (loginError) {
+        isValidEmail.value = true;
+        isValidPassword.value = true;
+    }
+
+    isValidEmail.value = emailError.value === '';
+    isValidPassword.value = passwordError.value === '';
 }
 
 function validation(email: string, password: string) {
@@ -38,24 +46,22 @@ function validation(email: string, password: string) {
     if (password.length === 0) {
         passwordError.value = "Input password";
     }
-
-    isValidEmail.value = emailError.value === '';
-    isValidPassword.value = passwordError.value === '';
 }
 
 const handle = (email: string, password: string) => {
     axios.get('/sanctum/csrf-cookie')
         .then(response => {
-            // axios.post('/user', {
-            //     email: email,
-            //     password: password
-            // })
-            //     .then(() => {
-            //         router.push('/dashboard');
-            //     })
-            //     .catch(() => {
-            //         loginError.value = true;
-            //     });
+            axios.post('/login', {
+                email: email,
+                password: password
+            })
+                .then((response) => {
+                    router.push('/dashboard');
+                    // console.log(response);
+                })
+                .catch((response) => {
+                    loginError.value = true;
+                });
             console.log(response.config.headers['X-XSRF-TOKEN'])
         })
         .catch(() => {
