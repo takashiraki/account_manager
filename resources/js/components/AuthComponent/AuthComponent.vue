@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+import axios from 'axios';
+
+const router = useRouter();
 
 const forgotLink = ref("/password-reset-request");
 const email = ref("");
@@ -7,12 +11,14 @@ const password = ref("");
 
 const emailError = ref("");
 const passwordError = ref("");
+const loginError = ref(false); // 新たに追加
 
 const isValidEmail = ref(false);
 const isValidPassword = ref(false);
 
 function onButtonClick() {
     validation(email.value, password.value);
+    handle(email.value, password.value);
 }
 
 function validation(email: string, password: string) {
@@ -36,6 +42,26 @@ function validation(email: string, password: string) {
     isValidEmail.value = emailError.value === '';
     isValidPassword.value = passwordError.value === '';
 }
+
+const handle = (email: string, password: string) => {
+    axios.get('/sanctum/csrf-cookie')
+        .then(response => {
+            // axios.post('/user', {
+            //     email: email,
+            //     password: password
+            // })
+            //     .then(() => {
+            //         router.push('/dashboard');
+            //     })
+            //     .catch(() => {
+            //         loginError.value = true;
+            //     });
+            console.log(response.config.headers['X-XSRF-TOKEN'])
+        })
+        .catch(() => {
+            loginError.value = true;
+        });
+}
 </script>
 
 <template>
@@ -48,6 +74,11 @@ function validation(email: string, password: string) {
                         <div class="card-body p-5 text-center">
                             <form @submit.prevent="onButtonClick" class="needs-validation">
                                 <h3 class="mb-5">Sign in</h3>
+
+                                <!-- 新たに追加 -->
+                                <div v-if="loginError" class="alert alert-danger" role="alert">
+                                    Login failed. Please check your credentials.
+                                </div>
 
                                 <div class="form-outline mb-4">
                                     <input v-model="email"

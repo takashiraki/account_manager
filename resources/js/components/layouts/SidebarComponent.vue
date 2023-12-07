@@ -38,7 +38,8 @@ const isLoan = route.path === '/loans';
 .btn.active,
 .btn.show,
 .btn:first-child:active,
-:not(.btn-check)+.btn:active {
+:not(.btn-check)+.btn:active,
+.dropdown-item:active {
     color: #fff;
     background-color: #0F8390;
     border-color: #0F8390;
