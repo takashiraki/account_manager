@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import axios from 'axios';
 
 const selectedRole = ref('admin'); // Default role
 
 const user_name = ref("");
 const nick_name = ref("");
+const accounts = ref([]);
 
 const user_name_error = ref("");
 const nick_name_error = ref("");
@@ -17,6 +19,7 @@ const account_links = ref([]);
 
 const onButtonClick = () => {
     validation(user_name.value, nick_name.value);
+    createRequest(user_name.value, nick_name.value, accounts.value);
 }
 
 const validation = (user_name: string, nick_name: string) => {
@@ -35,6 +38,21 @@ const validation = (user_name: string, nick_name: string) => {
 
     is_valid_user_name.value = user_name_error.value === '';
     is_valid_nick_name.value = nick_name_error.value === '';
+}
+
+const createRequest = (user_name: string, nick_name: string | null, accounts: string[]) => {
+    axios.post(
+        'api/user/create',
+        {
+            user_name: user_name,
+            nick_name: nick_name,
+            accounts: accounts
+        })
+        .then((respone) => {
+            //
+        }).catch(() => {
+            //
+        });
 }
 
 

@@ -17,7 +17,7 @@ const isValidEmail = ref(false);
 const isValidPassword = ref(false);
 
 function onButtonClick() {
-    // validation(email.value, password.value);
+    validation(email.value, password.value);
     handle(email.value, password.value);
 
     // if (loginError) {
@@ -30,21 +30,25 @@ function onButtonClick() {
 }
 
 function validation(email: string, password: string) {
+    loginError.value = false;
     emailError.value = "";
     passwordError.value = "";
 
     if (email.length === 0 && password.length === 0) {
-        emailError.value = "Input your email.";
-        passwordError.value = "Input password";
+        // emailError.value = "Input your email.";
+        // passwordError.value = "Input password";
+        loginError.value = true;
         return;
     }
 
     if (email.length === 0) {
-        emailError.value = "Input your email.";
+        // emailError.value = "Input your email.";
+        loginError.value = true;
     }
 
     if (password.length === 0) {
-        passwordError.value = "Input password";
+        // passwordError.value = "Input password";
+        loginError.value = true;
     }
 }
 
