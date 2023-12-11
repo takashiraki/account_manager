@@ -17,6 +17,7 @@
     },
     "dependencies": {
         "bootstrap-vue": "^2.23.1",
+        "pinia": "^2.1.7",
         "vue-router": "^4.2.5"
     }
 }

@@ -7,6 +7,8 @@
 import './bootstrap';
 import { createApp } from 'vue';
 
+import { createPinia } from 'pinia';
+
 import { createPopper } from '@popperjs/core';
 const popcorn = document.querySelector('#popcorn');
 const tooltip = document.querySelector('#tooltip');
@@ -28,6 +30,7 @@ axios.defaults.withCredentials = true;
 import "bootstrap/dist/js/bootstrap.bundle.min.js"
 
 const app = createApp(RootComponent);
+const pinia = createPinia();
 // app.component('auth-component', AuthComponent);
 
 /**
@@ -49,5 +52,6 @@ const app = createApp(RootComponent);
  */
 
 app.use(router);
+app.use(pinia);
 
 app.mount('#app');
