@@ -42,7 +42,7 @@ const validation = (user_name: string, nick_name: string) => {
 
 const createRequest = (user_name: string, nick_name: string | null, accounts: string[]) => {
     axios.post(
-        'api/user/create',
+        '/api/user/create',
         {
             user_name: user_name,
             nick_name: nick_name,

@@ -26,6 +26,7 @@ import router from './router/index';
 
 import axios from 'axios';
 axios.defaults.withCredentials = true;
+axios.defaults.withXSRFToken = true;
 
 import "bootstrap/dist/js/bootstrap.bundle.min.js"
 
