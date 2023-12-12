@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Requests\User;
 
 use Illuminate\Foundation\Http\FormRequest;
@@ -22,18 +24,20 @@ class UpsertUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'user_name'=>['required','string','between:1,256'],
-            'nick_name'=>'nullable|string|betweem:1,256',
-            'accounts'=>'nullable|array',
+            'user_name' => ['required', 'string', 'between:1,256'],
+            'email' => ['required', 'email:filter,dns', 'unique:App\Models\User,email'],
+            'nick_name' => 'nullable|string|betweem:1,256',
+            'accounts' => 'nullable|array',
         ];
     }
 
-    public function attributes():array
+    public function attributes(): array
     {
         return [
-            'user_name'=>"ユーザー名",
-            'nick_name'=>"ニックネーム",
-            'accounts'=>"アカウント"
+            'user_name' => 'user name',
+            'nick_name' => 'nick name',
+            'email' => 'email',
+            'accounts' => 'account',
         ];
     }
 }

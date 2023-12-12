@@ -22,5 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
-    Route::post('/user/create', [CreateUserController::class,'handle']);
+    Route::post('/user/create', [CreateUserController::class, 'handle']);
 });

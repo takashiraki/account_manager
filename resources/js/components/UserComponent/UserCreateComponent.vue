@@ -62,8 +62,8 @@ const createRequest = (user_name: string, nick_name: string | null, email: strin
         })
         .then((respone) => {
             //
-        }).catch(() => {
-            //
+        }).catch((error) => {
+            console.log(error.response.data.errors.user_name);
         });
 }
 
