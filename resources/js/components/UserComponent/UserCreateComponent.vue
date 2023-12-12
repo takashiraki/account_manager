@@ -6,25 +6,29 @@ const selectedRole = ref('admin'); // Default role
 
 const user_name = ref("");
 const nick_name = ref("");
+const email = ref("");
 const accounts = ref([]);
 
 const user_name_error = ref("");
 const nick_name_error = ref("");
+const email_error = ref("");
 
 const is_valid_user_name = ref(false);
 const is_valid_nick_name = ref(false);
+const is_valid_email = ref(false);
 
 const number_of_accounts = ref(0);
 const account_links = ref([]);
 
 const onButtonClick = () => {
-    validation(user_name.value, nick_name.value);
-    createRequest(user_name.value, nick_name.value, accounts.value);
+    validation(user_name.value, nick_name.value, email.value);
+    createRequest(user_name.value, nick_name.value, email.value, accounts.value);
 }
 
-const validation = (user_name: string, nick_name: string) => {
+const validation = (user_name: string, nick_name: string, email: string) => {
     user_name_error.value = "";
-    let user_email_error: string = "";
+    nick_name_error.value = "";
+    email_error.value = "";
 
     if (user_name.length === 0) {
         user_name_error.value = "Enter new user name.";
@@ -36,16 +40,24 @@ const validation = (user_name: string, nick_name: string) => {
         nick_name_error.value = "Nick name must be less than 256 characters long."
     }
 
+    if (email.length === 0) {
+        email_error.value = "Enter email.";
+    } else if (email.length > 256) {
+        email_error.value = "Email must be between 1 and 256 characters long.";
+    }
+
     is_valid_user_name.value = user_name_error.value === '';
     is_valid_nick_name.value = nick_name_error.value === '';
+    is_valid_email.value = email_error.value === '';
 }
 
-const createRequest = (user_name: string, nick_name: string | null, accounts: string[]) => {
+const createRequest = (user_name: string, nick_name: string | null, email: string, accounts: string[]) => {
     axios.post(
         '/api/user/create',
         {
             user_name: user_name,
             nick_name: nick_name,
+            email: email,
             accounts: accounts
         })
         .then((respone) => {
@@ -86,11 +98,16 @@ const removeAccountLink = (id) => {
                 v-bind:class="{ 'form-control': true, 'mr-2': true, 'is-invalid': user_name_error, 'is-valid': is_valid_user_name }"
                 type="text" name="user_name" id="user_name">
             <p class="text-danger">{{ user_name_error }}</p>
-            <label for="nick_name" role="button" class="mt-3">Nick name *</label>
+            <label for="nick_name" role="button" class="mt-3">Nick name</label>
             <input v-model="nick_name"
                 v-bind:class="{ 'form-control': true, 'mr-2': true, 'is-invalid': nick_name_error, 'is-valid': is_valid_nick_name }"
-                type="text" name="user_name" id="nick_name">
+                type="text" name="nick_name" id="nick_name">
             <p class="text-danger">{{ nick_name_error }}</p>
+            <label for="email" role="button" class="mt-3">Email *</label>
+            <input v-model="email"
+                v-bind:class="{ 'form-control': true, 'mr-2': true, 'is-invalid': email_error, 'is-valid': is_valid_email }"
+                type="text" name="user_email" id="email">
+            <p class="text-danger">{{ email_error }}</p>
         </div>
         <div class="border-bottom py-3">
             <div class="d-flex align-items-center">
