@@ -1,6 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { pushScopeId, ref } from 'vue';
 import axios from 'axios';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const selectedRole = ref('admin'); // Default role
 
@@ -61,7 +64,7 @@ const createRequest = (user_name: string, nick_name: string | null, email: strin
             accounts: accounts
         })
         .then((respone) => {
-            //
+            router.push('/user/create-complete');
         }).catch((error) => {
             console.log(error.response.data.errors.user_name);
         });

@@ -6,6 +6,7 @@ import AccountComponent from './../components/AccountComponent/AccountComponent.
 import UserComponent from './../components/UserComponent/UserComponent.vue';
 import UserListComponent from './../components/UserComponent/UserListComponent.vue';
 import UserCreateComponent from './../components/UserComponent/UserCreateComponent.vue';
+import UseraCreatedCompoleteComponent from './../components/UserComponent/UseeCreatedCompletedComponent.vue';
 import UserEditComponent from './../components/UserComponent/UserEditComponent.vue';
 import UserOldInfoComponent from './../components/UserComponent/UserOldInfoComponent.vue';
 import UserDetailComponent from './../components/UserComponent/UserDetailComponent.vue';
@@ -51,6 +52,11 @@ const router = createRouter({
                     path: '/user/create',
                     name: 'Create new user',
                     component: UserCreateComponent,
+                },
+                {
+                    path: '/user/create-complete',
+                    name: 'Created new user',
+                    component: UseraCreatedCompoleteComponent
                 },
                 {
                     path: '/user/:id/edit',

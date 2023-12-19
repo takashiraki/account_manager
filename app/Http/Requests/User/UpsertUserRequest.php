@@ -26,7 +26,7 @@ class UpsertUserRequest extends FormRequest
         return [
             'user_name' => ['required', 'string', 'between:1,256'],
             'email' => ['required', 'email:filter,dns', 'unique:App\Models\User,email'],
-            'nick_name' => 'nullable|string|betweem:1,256',
+            'nick_name' => 'nullable|string|between:1,256',
             'accounts' => 'nullable|array',
         ];
     }
