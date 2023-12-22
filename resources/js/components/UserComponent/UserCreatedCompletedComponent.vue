@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useRoute } from 'vue-router';
+const route = useRoute();
+const query = route.params.userData;
 </script>
 
 <template>

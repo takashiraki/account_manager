@@ -64,7 +64,19 @@ const createRequest = (user_name: string, nick_name: string | null, email: strin
             accounts: accounts
         })
         .then((respone) => {
-            router.push('/user/create-complete');
+            const user_data = {
+                user_name: user_name,
+                nick_name: nick_name,
+                email: email,
+                accounts: accounts
+            };
+
+            router.push(
+                {
+                    name: 'create-complete',
+                    query: user_data
+                }
+            );
         }).catch((error) => {
             console.log(error.response.data.errors.user_name);
         });
