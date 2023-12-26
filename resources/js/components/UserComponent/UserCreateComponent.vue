@@ -74,7 +74,9 @@ const createRequest = (user_name: string, nick_name: string | null, email: strin
             router.push(
                 {
                     name: 'create-complete',
-                    query: user_data
+                    params: {
+                        user_data: user_data
+                    }
                 }
             );
         }).catch((error) => {
