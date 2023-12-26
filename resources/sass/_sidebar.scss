@@ -1,20 +1,40 @@
 $button_basic: #fff;
-
-$button_hover: #0F8390;
+$font_color: #0F8390;
+$button_hover: #F5F6F6;
 
 .sidebar{
     list-style: none;
+    padding: 0px;
+    flex-direction: column;
+    align-items: center;
+    top: 20px;
 }
 
-.btn-outline-primary
+.sidebar-btn
 {
     background-color: $button_basic;
     border: none;
     width: 180px;
-    color: #0F8390;
+    color: $font_color;
     font-size: 16px;
     &:hover{
-        color: $button_basic;
+        color: $font_color;
         background-color: $button_hover;
+        border: none;
+    }
+    &:active{
+        color: $font_color;
+        background-color: $button_hover;
+    }
+}
+
+.router-link-active
+{
+    background-color: #0F8390;
+    color: #fff;
+    &:hover
+    {
+        color: #fff;
+        background-color: #0F8390;
     }
 }

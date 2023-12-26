@@ -1,20 +1,51 @@
-$button_basic: #0F8390;
+$strong_color: #0F8390;
+$base_color: #fff;
+$font_color: #333;
 
-$button_hover: #fff;
-$button_hover_border: #0F8390;
+.form-select:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px #0F8390 inset;
+}
 
-div .btn-primary{
-    background-color: $button_basic;
-    border: none;
-    width: 180px;
+.row{
+        --bs-gutter-x: 0;
+}
+
+.btn-primary{
+    color: $base_color;
+    background-color: $strong_color;
+    border: 1px solid $strong_color;
     &:hover{
-        color: $button_basic;
-        background-color: $button_hover;
-        border: 1px solid $button_hover_border;
+        color: $strong_color;
+        background-color: $base_color;
+        border: 1px solid $strong_color;
     }
 }
 
-.main-container{
-    border: 1px solid $button_hover_border;
-    border-radius: 5px;
+.btn-outline-primary{
+    color: $strong_color;
+    background-color: $base_color;
+    border: 1px solid $strong_color;
+    &:hover{
+        color: $base_color;
+        background-color: $strong_color;
+        border: 1px solid $strong_color;
+    }
+}
+
+.icon-btn{
+    max-width: 40px;
+}
+
+.more_horiz{
+    border: none;
+    &:hover{
+        color: $strong_color;
+        background-color: $base_color;
+        border: none;
+    }
+}
+
+.alert{
+    border: none;
 }
