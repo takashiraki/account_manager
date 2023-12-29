@@ -57,7 +57,7 @@ const router = createRouter({
                     path: '/user/create-complete',
                     name: 'create-complete',
                     component: UseraCreatedCompoleteComponent,
-                    props: route => ({temp:route.params.user_data}),
+                    props: {user : user}
                 },
                 {
                     path: '/user/:id/edit',
